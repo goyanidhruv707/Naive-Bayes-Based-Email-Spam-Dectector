@@ -1,5 +1,6 @@
 import os
 import re
+import training
 
 def testModel():
     print("Processing \"model.txt\" file for Testing...")
@@ -24,8 +25,11 @@ def readFile(pathTestData,fileName):
 
 #testing the model by calculating scores
 def testingModel(modelDict):
-    scoreHam=0
-    scoreSpam=0
+    
+    probHam=training.hamFileCount/(training.hamFileCount+training.spamFileCount)
+    probSpam=training.spamFileCount/(training.hamFileCount+training.spamFileCount)
+    scoreHam=probHam
+    scoreSpam=probSpam
     counter=1
     pathTestData="Input/Project2-Test/test"
     writeFile=open("Output/result.txt","w")
@@ -50,6 +54,6 @@ def testingModel(modelDict):
         writeFile.write(str(counter)+"  "+fileName+"  "+actualLabel+"  "+str(scoreHam)+"  "+str(scoreSpam)+ \
                         "  "+expectedLabel+"  "+result+"\n")
         counter+=1
-        scoreHam=0
-        scoreSpam=0
+        scoreHam=probHam
+        scoreSpam=probSpam
     writeFile.close()
