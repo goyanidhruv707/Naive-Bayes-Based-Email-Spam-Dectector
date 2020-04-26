@@ -1,5 +1,6 @@
 import os
 import re
+import math
 import training
 
 def testModel():
@@ -26,8 +27,8 @@ def readFile(pathTestData,fileName):
 #testing the model by calculating scores
 def testingModel(modelDict):
     
-    probHam=training.hamFileCount/(training.hamFileCount+training.spamFileCount)
-    probSpam=training.spamFileCount/(training.hamFileCount+training.spamFileCount)
+    probHam=math.log10(training.hamFileCount/(training.hamFileCount+training.spamFileCount))
+    probSpam=math.log10(training.spamFileCount/(training.hamFileCount+training.spamFileCount))
     scoreHam=probHam
     scoreSpam=probSpam
     counter=1
