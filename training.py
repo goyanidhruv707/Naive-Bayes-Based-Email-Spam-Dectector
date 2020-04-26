@@ -33,7 +33,7 @@ def readTrainingFiles(trainingFiles):
     global hamFileCount
     global spamFileCount
     
-    print("Prosessing Training Files...")
+    print("Processing Training Files...")
     
     for f in trainingFiles:
         if f[6] == "h":
@@ -69,7 +69,7 @@ def readTrainingFiles(trainingFiles):
                         wordDictionarySpam[word] += 1
                     else:
                         wordDictionarySpam[word] = 1
-    print("Finished Prosessing Training Files.\n")
+    print("Finished Processing Training Files.\n")
 
 
 def countHamSpam():
