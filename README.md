@@ -1,5 +1,5 @@
 # Naive-Bayes-Based-Email-Spam-Dectector
-##########################################################################################################
+################################################################################################
 
 The project structure contains the following list of files:
 1) Input: This contains all the input files needed for the training and testing of the mode.
@@ -9,10 +9,10 @@ The project structure contains the following list of files:
 5) testing.py: This file performs the testing on the model.txt using input testing data and generates result.txt.
 6) training.py: This file performs the training on input training data and creates model.txt.
   
-##########################################################################################################
+################################################################################################
 
 Instructions for Execution:
 1) Run the main.py file(i.e., python main.py) which runs the code for training, testing and analysis.
 
-##########################################################################################################
+################################################################################################
  
