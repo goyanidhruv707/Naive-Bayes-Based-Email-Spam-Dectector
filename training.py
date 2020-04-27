@@ -24,7 +24,7 @@ def trainModel():
     calculateProbabilityAndWriteOutput()
     print("Training Completed.\n")
     
-
+#Reading Training Files
 def readTrainingFiles(trainingFiles):
     global setOfWords
     global dictionaryOfWords
@@ -71,7 +71,7 @@ def readTrainingFiles(trainingFiles):
                         wordDictionarySpam[word] = 1
     print("Finished Processing Training Files.\n")
 
-
+#Calculate Ham and Spam Score
 def countHamSpam():
     global hamCount
     global spamCount
@@ -87,7 +87,7 @@ def countHamSpam():
     print("Ham Words:", len(wordDictionaryHam))
     print("Spam Words:", len(wordDictionarySpam),"\n")
 
-
+#Calculate Probability and Write output model.txt file
 def calculateProbabilityAndWriteOutput():
     global setOfWords
     lineCount = 1
